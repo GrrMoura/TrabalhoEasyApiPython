@@ -7,7 +7,8 @@ class SwapiApiConsumer(object):
     @classmethod
     def get_ship(self, page:int):
      params= {'page':page}
-     response = requests.get('https://swapi.dev/api/starships',params=params,  auth=('user', 'pass'))
+     response = requests.get('https://swapi.dev/api/starships',params=params)
+     return response.json()
    
 
     
